@@ -92,22 +92,52 @@ namespace G_NET106_OOP_01
 
         public Shipment(string trackingCode, string description, double weight, decimal deliveryFee, DeliveryAddress destination)
         {
-            
+
             this.trackingCode = "DEFAULT_CODE";
             this.description = "Unknown";
             this.weight = 1.0;
             this.deliveryFee = 50m;
             this.Destination = destination;
 
-           
+
             TrackingCode = trackingCode;
             Description = description;
             Weight = weight;
             DeliveryFee = deliveryFee;
+        }
 
 
+        #endregion
+
+        #region Question04 part2
+        public void UpdateDeliveryFee(decimal newFee)
+        {
+            if (newFee > 0)
+            {
+                DeliveryFee = newFee;
+            }
+        }
+
+
+        public void PrintShipment()
+        {
+            Console.WriteLine("");
+            Console.WriteLine($" Tracking Code : {TrackingCode}");
+            Console.WriteLine($" Description   : {Description}");
+            Console.WriteLine($" Weight        : {Weight} kg");
+            Console.WriteLine($" Delivery Fee  : ${DeliveryFee}");
+            Console.WriteLine($" Estimated Cost: ${EstimatedCost}");
+            Console.WriteLine($" Destination   : {Destination.GetFullAddress()}");
+            Console.WriteLine("");
         }
 
         #endregion
+
+
+
+
     }
+
+       
+    
 }
