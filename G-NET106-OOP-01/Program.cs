@@ -40,6 +40,32 @@
              
              */
             #endregion
+
+
+            #region Question03
+
+            DeliveryAddress deliveryAddress1 = new DeliveryAddress("Cairo", "El Tahrir", 13);
+
+            DeliveryAddress deliveryAddress2 = deliveryAddress1;
+
+            deliveryAddress2.City= "Alexandria";
+
+            deliveryAddress2.Street = "Khaled Ebn El Waleed";
+
+            deliveryAddress2.BuildingNumber = 42;
+
+            Console.WriteLine("Original Address"   );
+            Console.WriteLine(deliveryAddress1.GetFullAddress());
+
+            Console.WriteLine("Modified Copied Address");
+            Console.WriteLine(deliveryAddress2.GetFullAddress());
+
+
+
+            #endregion
+
+
+
         }
     }
 }
